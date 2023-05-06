@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    border: 0;
+    /*边框*/
+    margin: 0;
+    /*外边距*/
+    padding: 0;
+    /*内边距*/
+}
+
+.el-header {
+    line-height: 56px;
+    background: #fff;
+}
+
+.el-header img {
+    height: 56px;
+    float: left;
+    margin-right: 20px;
+}
+
+.el-main {
+    padding: 0;
+    text-align: center;
+    /* background-color: #e6e6e6; */
+}
+
+.el-main::-webkit-scrollbar {
+    display: none
+}
+
+.introduce {
+    background: url(../images/首页/101.jpg) no-repeat center center;
+    height: 318px;
+}
+
+.mid-bg {
+    height: 600px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: transparent;
+    background: url(../images/首页/102.jpg) no-repeat;
+    background-size: 100% auto;
+    background-position: 0% 50%;
+    background-Attachment: scroll;
+}
+
+.mid {
+    width: 70%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.mid .title {
+    font-size: 30px;
+    margin: 80px 0 10px 0;
+}
+
+.mid .desc {
+    width: 85%;
+    margin: 0 auto;
+    text-indent: 2rem;
+    text-align: justify;
+    line-height: 2;
+}
+
+.mid img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+
+.el-tab-pane {
+    padding-top: 30px;
+}
+
+.el-tab-pane span {
+    font-family: 'times new roman';
+    color: rgb(118, 146, 60);
+    font-size: 36px;
+}
+
+.pane {
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 3;
+}
+
+.pane p {
+    text-indent: 2em;
+}
+
+.center {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.center img,
+.center video {
+    width: 640px;
+}
+
+.el-footer {
+    /*从绿色到黄色的渐变*/
+    background: linear-gradient(to right, green, #FEDB2E);
+    text-align: center;
+    line-height: 30px;
+    padding-top: 23px;
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国航天简介</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/my-style.css" />
+</head>
+
+<body>
+    <header>
+        <ul>
+            <a href="#section1">
+                <li class="title">中国航天简介</li>
+            </a>
+            <li>
+                <ul>
+                    <li><a href="#section2">航天日</a> </li>
+                    <li><a href="#section3">发展史</a></li>
+                    <li><a href="#section6">知识科普</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="section1 bg" id="section1">
+            <img src="./images/moon.png" class="moon animate__animated animate__bounceInRight wow">
+            <img src="./images/satellite.png" alt="" id="satellite">
+            <img src="./images/human.png" alt="" class="human animate__animated animate__bounceInLeft wow">
+            <div class="context">
+                <p class="title animate__animated animate__backInDown wow">弘扬航天精神 拥抱星辰大海</p>
+                <p class="sub-title animate__animated animate__backInUp wow">
+                    1970年4月24日，中国第一颗人造卫星东方红一号在酒泉卫星发射中心成功升空，发出了悠扬的《东方红》歌声。这是中国科技史上的一个里程碑，标志着中国成为世界上第五个拥有人造卫星的国家。它也为中国人探索宇宙奥秘，和平利用太空资源，造福人类社会，开启了崭新的篇章。
+                </p>
+            </div>
+        </section>
+
+        <section class="sections bg" id="section2">
+            <div class="context">
+                <p class="title animate__animated animate__backInDown wow">中国航天日</p>
+                <div class="desc">
+                    <p class="animate__animated animate__zoomIn wow">
+                        中国航天日是为了纪念中国航天事业成就，发扬中国航天精神而计划设立的一个纪念日。主旨是要铭记历史、传承精神，激发全民尤其是青少年崇尚科学、探索未知、敢于创新的热情，为实现中华民族伟大复兴的中国梦凝聚强大力量。
+                    </p>
+                    <p class="animate__animated animate__zoomIn wow">
+                        2016年3月8日，国务院批复同意将每年4月24日设立为“中国航天日”。首个中国航天日将以“中国梦，航天梦”为主题，国防科工局已会同有关部门筹划部署“开放日”“科普周”等系列宣传和科普活动。设立“中国航天日”，旨在宣传中国和平利用外层空间的一贯宗旨，大力弘扬航天精神，科学普及航天知识，激发全民族探索创新热情，唱响“探索浩瀚宇宙、发展航天事业、建设航天强国”的主旋律，凝聚实现中国梦航天梦的强大力量。
+                    </p>
+
+                </div>
+                <div class="video_entry animate__animated animate__jello animate__delay-1s wow">
+                    <img src="./images/button.png" alt="" class="button">
+                    <img src="./images/开.png" alt="" class="video_on">
+                    <button class="poster_video" onclick="open_video()"></button>
+                </div>
+
+                <!-- 视频页 -->
+                <div id="video_page">
+                    <div id="middle_video">
+                        <img src="./images/close.png" alt="" onclick="close_video()">
+                        <video width="800" id="cd" controls>
+                            <source src="./video/4b2895a25cd3fbb6fbd47862a9503be9.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 190" xmlns="http://www.w3.org/2000/svg"
+                class="transition duration-300 ease-in-out delay-150">
+                <style>
+                    .path-0 {
+                        animation: pathAnim-0 10s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+
+                    @keyframes pathAnim-0 {
+                        0% {
+                            d: path("M 0,600 C 0,600 0,300 0,300 C 122.28571428571428,228.39285714285714 244.57142857142856,156.78571428571428 350,188 C 455.42857142857144,219.21428571428572 543.9999999999999,353.24999999999994 676,375 C 808.0000000000001,396.75000000000006 983.4285714285716,306.2142857142858 1118,275 C 1252.5714285714284,243.78571428571425 1346.2857142857142,271.8928571428571 1440,300 C 1440,300 1440,600 1440,600 Z");
+                        }
+
+                        25% {
+                            d: path("M 0,600 C 0,600 0,300 0,300 C 89.78571428571428,350.8571428571429 179.57142857142856,401.7142857142857 310,401 C 440.42857142857144,400.2857142857143 611.5,348.00000000000006 746,315 C 880.5,281.99999999999994 978.4285714285716,268.2857142857143 1088,269 C 1197.5714285714284,269.7142857142857 1318.7857142857142,284.8571428571429 1440,300 C 1440,300 1440,600 1440,600 Z");
+                        }
+
+                        50% {
+                            d: path("M 0,600 C 0,600 0,300 0,300 C 100.60714285714289,259.57142857142856 201.21428571428578,219.14285714285717 336,245 C 470.7857142857142,270.85714285714283 639.7499999999998,363 781,382 C 922.2500000000002,401 1035.7857142857144,346.85714285714283 1141,321 C 1246.2142857142856,295.14285714285717 1343.1071428571427,297.57142857142856 1440,300 C 1440,300 1440,600 1440,600 Z");
+                        }
+
+                        75% {
+                            d: path("M 0,600 C 0,600 0,300 0,300 C 93.17857142857142,356.32142857142856 186.35714285714283,412.64285714285717 317,381 C 447.64285714285717,349.35714285714283 615.75,229.74999999999997 736,215 C 856.25,200.25000000000003 928.6428571428571,290.3571428571429 1038,322 C 1147.357142857143,353.6428571428571 1293.6785714285716,326.82142857142856 1440,300 C 1440,300 1440,600 1440,600 Z");
+                        }
+
+                        100% {
+                            d: path("M 0,600 C 0,600 0,300 0,300 C 122.28571428571428,228.39285714285714 244.57142857142856,156.78571428571428 350,188 C 455.42857142857144,219.21428571428572 543.9999999999999,353.24999999999994 676,375 C 808.0000000000001,396.75000000000006 983.4285714285716,306.2142857142858 1118,275 C 1252.5714285714284,243.78571428571425 1346.2857142857142,271.8928571428571 1440,300 C 1440,300 1440,600 1440,600 Z");
+                        }
+                    }
+                </style>
+                <defs>
+                    <linearGradient id="gradient" x1="73%" y1="6%" x2="27%" y2="94%">
+                        <stop offset="5%" stop-color="#7081ff"></stop>
+                        <stop offset="95%" stop-color="#4e59af"></stop>
+                    </linearGradient>
+                </defs>
+                <path
+                    d="M 0,600 C 0,600 0,300 0,300 C 122.28571428571428,228.39285714285714 244.57142857142856,156.78571428571428 350,188 C 455.42857142857144,219.21428571428572 543.9999999999999,353.24999999999994 676,375 C 808.0000000000001,396.75000000000006 983.4285714285716,306.2142857142858 1118,275 C 1252.5714285714284,243.78571428571425 1346.2857142857142,271.8928571428571 1440,300 C 1440,300 1440,600 1440,600 Z"
+                    stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
+                    class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            </svg>
+        </section>
+
+        <section class="sections bg" id="section3">
+            <img src="./images/rocket-header.png" alt="" width="500">
+            <div class="animate__animated animate__pulse animate__faster animate__infinite wow"
+                style="position: relative;top: 50%;">
+                <img src="./images/rocket-footer.png" alt="" width="500">
+            </div>
+
+            <div class="tl animate__animated animate__backInLeft wow">
+                <p class="part1-date s-date">1956年</p>
+                <p class="part1">钱学森回国后，创建了中国火箭与导弹事业的摇篮——国防部第五研究院，中国第一个火箭与导弹研究机构成立</p>
+            </div>
+            <div class="tr animate__animated animate__backInRight animate__delay-1s wow">
+                <p class="part2-date t-date">1970年</p>
+                <p class="part2">“东方红一号”发射，中国成为世界第五个发射卫星的国家。卫星在轨播放《东方红》，至今仍在运行。</p>
+            </div>
+            <div class="bl animate__animated animate__backInLeft  animate__delay-2s wow">
+                <p class="part3-date s-date">1975年</p>
+                <p class="part3">中国发射了一颗返回式人造卫星，第一次实现人造卫星“收放自如”</p>
+            </div>
+            <div class="br animate__animated animate__backInRight animate__delay-3s wow">
+                <p class="part4-date t-date">1981年</p>
+                <p class="part4">中国独立掌握“一箭多星”发射技术，提高了发射效率和经济性。</p>
+            </div>
+        </section>
+
+        <section class="sections bg" id="section4">
+            <div class="part part1 animate__animated animate__fadeInDown wow">
+                <p style="padding-top: 50%;">1999年</p>
+                <p>中国第一艘无人实验飞船成功发射</p>
+            </div>
+            <div class="part part2 animate__animated animate__fadeInUp wow">
+                <p style="padding-top: 50%;">2003年</p>
+                <p>中国成为世界上第三个将人类送上太空的国家</p>
+            </div>
+            <div class="part part3 animate__animated animate__fadeInUp wow">
+                <p style="padding-top: 50%;">2008年</p>
+                <p>“神州七号”完成空间出舱活动</p>
+            </div>
+            <div class="part part4  animate__animated animate__fadeInDown wow">
+                <p style="padding-top: 50%;">2013年</p>
+                <p>“嫦娥三号”成为中国第一个月球软着陆的无人登月探测器</p>
+            </div>
+        </section>
+
+        <section class="sections bg" id="section5">
+            <div class="section5-bg">
+                <img src="./images/satellite.png" alt="">
+
+                <div class="part part1 animate__animated animate__jackInTheBox wow">
+                    <b>2019年</b>
+                    <p>“长征十一号”首次完成海上发射</p>
+                </div>
+                <div class="part part2 animate__animated animate__jackInTheBox animate__delay-1s wow">
+                    <b>2018年</b>
+                    <p>“嫦娥四号”带着“玉兔二号”来到了月球背面，开启月球探测新旅程</p>
+                </div>
+                <div class="part part3 animate__animated animate__jackInTheBox animate__delay-2s wow">
+                    <b>2021年</b>
+                    <p>“长征二号”送入太空</p>
+                </div>
+                <div class="part part4 animate__animated animate__jackInTheBox animate__delay-3s wow">
+                    <b>2023年</b>
+                    <p>“天问一号”着陆火星，是我国首次实现地外行星着陆，我国成为世界第二个成功着陆火星的国家</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sections bg" id="section6">
+            <div class="left">
+                <div class="rotateBox">
+                    <img src="./images/rotate.png" alt="" class="rotate">
+                </div>
+                <img src="./images/moon.png" alt="" class="moonlight">
+            </div>
+            <div class="right-up animate__animated animate__slideInLeft wow">
+                <p class="title">飞机并非飞得越高风险越大</p>
+                <p>飞机在起降时是最危险的，巡航阶段是飞行中最安全的时候普通民航客机的升限在1.2万米左右，巡航的高度不等，短程航线的航班巡航高度在6000米至9000米不等，洲际航线的巡航高度一般达到8000米至1.2万米不等。
+                </p>
+                <p>同时，还需要根据不同国家制定的高度层来确定巡航高度，但巡航高度通常在对流层顶飞行，能见度高、气流稳定、还能增加飞行航程，再往上空气开始稀薄。此外，飞机飞在哪个高度层，需要听从空管的指挥，不可高于或低于这个高度。
+                </p>
+            </div>
+            <div class="right-down animate__animated animate__slideInRight wow">
+                <p class="title">雷暴天气飞行是安全的</p>
+                <p>因为飞机的金属外壳可以抗雷击，能起到保护作用</p>
+                <p>飞行员也会利用气象雷达，勘测环境从而避开风暴最严重的区域，保证飞行安全，一般的雷击，不会对飞机机体造成伤害，也不会影响到各零部件作用</p>
+                <p>飞机在机翼尖端安装了放电刷，可将静电释放到大气中，因此也会减少被雷击的概率，大家也可放心出行。</p>
+            </div>
+        </section>
+
+        <section class="sections bg" id="section7">
+            <div class="left animate__animated animate__slideInRight wow">
+                <p class="title">民航飞机不配备降落伞的原因</p>
+                <p>乘客能航行在空气稀薄、温度约低于零下50℃的万米高空，是因为客舱经过特殊的加压处理之后与外部有一个压差，因此飞机在飞行过程中是无法打开舱门的。</p>
+                <p>即使舱门被强行打开，机内外的温度差与压差过大，会直接给乘客的身体健康造成影响，即使有受过专业训练的乘客成功跳出机外，由于飞行速度过快，也很容易被卷进舱门旁边的发动机里。</p>
+                <p>据统计，民航飞机事故主要发生在“滑跑-起飞”和“进近-着陆”阶段，这个阶段的高度太低时间太短，降落伞无法完全展开。因此在飞机上安装降落伞，是无法有效保证乘客安全的。</p>
+            </div>
+            <div class="right animate__animated animate__slideInLeft wow">
+                <img src="./images/mac.png" alt="">
+            </div>
+        </section>
+
+        <section class="sections bg" id="section8">
+            <div class="context">
+                <p class="title animate__animated animate__bounceInDown wow">飞机下降时耳朵难受的原因</p>
+                <p>飞机下降时，外界环境压力大于鼓室压力，鼓室形成负压，因咽鼓管是“单向活门”，不能自行开放，必须主动做咽鼓管通气动作，才能使之开放。如鼓室负压持续存在且不能消除，则可形成中耳气压损伤。</p>
+                <p>中耳气压损伤多发生于4000米以下，尤以1000-2000米高度为最多。</p>
+                <p>预防中耳气压性损伤，需要主动作咽鼓管通气动作，常见的方法有：</p>
+                <p>① 吞咽法</p>
+                <p>② 捏鼻鼓气法（感冒时谨慎使用）</p>
+                <p>③ 运动下颌法</p>
+                <p>④ 运动软腭法，如模拟打哈欠</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="centerBox">
+            <p>版权所有 © 2023 ALL RIGHTS RESERVED</p>
+            <p>Powered By 采编Z2102班第五组</p>
+        </div>
+    </footer>
+
+    <script>
+        var video = document.getElementById("middle_video");
+        var video_page = document.getElementById("video_page");
+
+        function open_video() {
+            video.style.cssText = "display:block;";
+            video_page.style.cssText = "display: block;";
+        }
+
+        function close_video() {
+            document.getElementById("cd").pause()
+            video.style.cssText = "display:none;";
+            video_page.style.cssText = "display: none;";
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        var img = document.getElementById('satellite');
+        // 角度
+        var angle = 0;
+        // 半径
+        var radius = 700;
+        // 圆心坐标
+        let centerX = window.innerWidth / 2 - 100;
+        var centerY = 938;
+        setInterval(() => {
+            // 圆心坐标
+            centerX = window.innerWidth / 2 - 100;
+            angle += 0.005;
+            let x = centerX + Math.cos(angle) * radius
+            let y = centerY + Math.sin(angle) * radius
+            img.style.left = x + 'px';
+            img.style.top = y + 'px';
+
+            if (y > 1050) {
+                img.style.display = 'none';
+            } else {
+                img.style.display = 'block';
+            }
+        }, 10);
+
+        // 滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+
+        })
+
+    </script>
+</body>
+
+<script src="./js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+</html>

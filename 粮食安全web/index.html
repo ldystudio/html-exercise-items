@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="./css/element.css">
+  <link rel="stylesheet" href="./css/my-style.css">
+
+  <title>中国粮食安全：历史、现状与未来</title>
+</head>
+
+<body>
+  <div id="app">
+    <el-container>
+
+      <el-header height="56px">
+        <el-row type="flex" justify="space-around">
+          <el-col :span="4">
+            <span style="font-size: 20px;">粮食安全</span>
+            <img src="./images/logo.png">
+          </el-col>
+          <el-col :span="12">
+            <!-- 菜单栏 -->
+            <el-menu :default-active="activeIndex" mode="horizontal" @select="changeLabel" background-color="#fff"
+              text-color="#000" active-text-color="#4CAF50">
+              <el-row type="flex" justify="space-around">
+                <el-menu-item index="首页">首页</el-menu-item>
+                <el-menu-item index="历史演变">历史演变</el-menu-item>
+                <el-menu-item index="地理分布">地理分布</el-menu-item>
+                <el-menu-item index="农业科技">农业科技</el-menu-item>
+                <el-menu-item index="禾下乘凉梦">禾下乘凉梦</el-menu-item>
+                <el-menu-item index="发展战略">发展战略</el-menu-item>
+              </el-row>
+            </el-menu>
+          </el-col>
+        </el-row>
+      </el-header>
+
+      <el-main>
+        <!-- 标签页 -->
+        <el-tabs v-model="labelName" tab-position="bottom">
+          <el-tab-pane name="首页">
+            <el-carousel indicator-position="outside" height="450px">
+              <el-carousel-item v-for="(image,index) in images" :key="index">
+                <img :src="image" :alt="image">
+              </el-carousel-item>
+            </el-carousel>
+
+            <el-row style="padding-top: 30px;">
+              <div class="introduce">
+                <h3 style="padding-top: 177px;font-size: 30px;">介绍</h3>
+                <p style="font-family: 'Comic Sans MS', Courier, monospace;">introduce</p>
+              </div>
+            </el-row>
+
+            <el-row class="mid-bg">
+              <el-row class="mid" type="flex" justify="space-around">
+                <el-col style="margin-left: 50px;">
+                  <p class="title">粮食是人类赖以生存和发展的必备物质</p>
+                  <p>Food is an essential material for human survival and development</p>
+                  <el-divider /></el-divider>
+                  <p class="desc">
+                    粮食安全问题始终是一个重要问题，关系到国计民生，是经济和社会发展的基础，很多国家和地区的政府以及一些国际组织都十分关注粮食安全。自“粮食安全”概念被提出以来，其内涵一直被不断丰富，意义也越来越重大。理解粮食安全的内涵及重要性对于任何国家和地区的粮食安全保障都起着非常关键的作用。
+                  </p>
+                  <br>
+                  <p class="desc">
+                    司马迁说道：国以民为本，民以食为天。粮食是食品，也是特殊的商品，是经济发展和政治稳定的重要物质保证。因此，粮食安全尤为重要，任何时候都要狠抓粮食问题。时代在变化，粮食安全的概念也在不断丰富。要充分有效地保证粮食安全就要非常清晰地了解什么是粮食、粮食安全，以及对于国家的重要意义。
+                  </p>
+                </el-col>
+                <el-col style="display: flex;align-items: center;">
+                  <img src="./images/首页/15.jpg" style="margin:0 30px 0 50px;">
+                  <img src="./images/首页/16.jpg">
+                </el-col>
+              </el-row>
+            </el-row>
+            <!-- <el-row type="flex" justify="space-around" style="width: 70%;margin: 0 auto;">
+              <el-col :span="4" v-for="(obj,index) in cardContext" :key="index">
+                <div class="card">
+                  <div class="card-image">
+                    <p>{{ obj.char }}</p>
+                  </div>
+                  <div class="card-description">
+                    <p class="text-title">{{ obj.title }}</p>
+                    <p class="text-body" v-for="text in obj.desc.split('，')" :key="text">{{ text }}</p>
+                  </div>
+                </div>
+              </el-col>
+            </el-row> -->
+          </el-tab-pane>
+
+
+          <el-tab-pane name="历史演变">
+            <img src="./images/desc-bg.jpg" width="90%" height="250px">
+            <ul>
+              <li><img src="./images/desc-header.png"></li>
+              <span>HISTORICAL</span>
+              <p style="font-size: 22px;margin: 5px 0 10px 0;">历史演变</p>
+              <li><img src="./images/desc-footer.png"></li>
+            </ul>
+            <div class="pane">
+              <div class="center">
+                <img src="./images/历史/23.jpg">
+              </div>
+              <p>
+                对于一个人来说，粮食是生活的基本需要，对于一个国家来说，充分维护好粮食安全反映了一个政府的执政能力。为了更全面地理解粮食安全，我们首先来了解一下什么是粮食。广义上，联合国粮农组织认为，有利于身体健康的且能够食用的物质都属于粮食。狭义上的粮食概念是谷物即稻谷、麦类、粗粮三大类。
+              </p>
+              <p>
+                农业百科全书把粮食的概念解释为：“谷类、薯类、豆类这些能够提供粮食的农作物，主要成分是淀粉、脂肪、蛋白质和维生素。”在弄清了粮食的概念之后，我们来着重了解一下什么是粮食安全。20世纪70年代，“粮食安全”这一概念正式被提出，随着时间的推移，粮食安全的内涵和外延不断被丰富和扩展。粮食安全的概念主要经历了三个阶段的发展变化。
+              </p>
+              <div class="center">
+                <img src="./images/历史/21.jpg">
+              </div>
+              <p>
+                建国初期，一穷二白，百废待兴，当时全年的粮食产量仅有1亿多吨，人均粮食仅有200千克出头。经济要发展，首先要解决的就是吃饭问题，于是粮食问题便成为当时全国发展的头号问题。在接下来的国民经济的恢复发展中，着重于土地改革和粮食增产，经过几年的发展，粮食产量终于有所提高，但还远谈不上安全。
+              </p>
+              <div class="center">
+                <img src="./images/历史/24.png">
+              </div>
+              <p>
+                1953年，中国开启了中国第一个“五年计划”，同时也开启了农业、手工业和资本主义工商业的三大改造。其中农村的组织从互助组到初级社，最后发展为高级社，为粮食的统购打下了基础。到1958年，五年计划完成后，进入到了人民公社发展时期。
+              </p>
+              <p>
+                当前人们对人民公社的评价不一。但客观地说，国家通过统购统销的方式，人民公社为工业化建设提供了大约8000多亿元的资金，而这正是中国工业化的最原始资本积累。此外，人民公社对粮食生产最大的贡献就是建设了完善的水利工程，这个意义非常深远，也是后来粮食实现全面增产的重要原因之一。
+              </p>
+              <p>而负面评价则是认为人民公社化的浮夸风、一刀切等直接导致了大跃进运动，致使粮食产量大减，直接进入了三年困难时期。</p>
+            </div>
+          </el-tab-pane>
+
+          <el-tab-pane name="地理分布">
+            <img src="./images/desc-bg.jpg" width="90%" height="250px">
+            <ul>
+              <li><img src="./images/desc-header.png"></li>
+              <span>GEOGRAPHY</span>
+              <p style="font-size: 22px;margin: 5px 0 10px 0;">地理分布</p>
+              <li><img src="./images/desc-footer.png"></li>
+            </ul>
+            <div id="map" style="height:640px;width: 640px;margin: 0 auto;"></div>
+            <div class="pane">
+              <p>我国粮食主产区包括辽宁、河北、山东、吉林、内蒙古、江西、湖南省、四川、河南、湖北省、江苏、安徽、黑龙江等十三个省份。</p>
+              <p>根据国家粮食局2011年统计数据显示：中国十三个粮食主产区粮食产量占全国总产量的比重为75.4%，约95%的全国增产粮食来自13个粮食主产区。</p>
+              <p>2017年，全国13个粮食主产区粮食产量占全国比重提高至76.2%，籽粒玉米调减1984万亩，大豆面积增加871万亩。绿色优质农产品供给显著增加，全国农产品质量安全例行监测总体合格率达到97.8%。</p>
+            </div>
+          </el-tab-pane>
+
+          <el-tab-pane name="农业科技">
+            <img src="./images/desc-bg.jpg" width="90%" height="250px">
+            <ul>
+              <li><img src="./images/desc-header.png"></li>
+              <span>TECHNOLOGY</span>
+              <p style="font-size: 22px;margin: 5px 0 10px 0;">农业科技</p>
+              <li><img src="./images/desc-footer.png"></li>
+            </ul>
+            <div class="pane">
+              <div class="center">
+                <video src="./vedio/科技.mp4" controls height="400px">
+              </div>
+              <p>“十三五”以来，通化市农业科学研究院充分发挥自身优势，心系国家粮食安全，实施科技兴农战略，克服困难，奋力而为，刻苦钻研，促进科研成果转化，助力农业和农村经济实现跨跃式发展。</p>
+              <b>奋力而为，屡获各级项目支持</b>
+              <p>
+                市农业科学研究院成立于1956年，原为通化地区农业试验站，1995年更名为通化市农业科学研究院。研究院现有国有土地1000亩，其中行政后勤用地200亩，农业科研用地800亩。全院共下设16个机构，其中，科研管理处、技术开发处等行政管理机构8个，玉米所、水稻所、作物所、植保所等科学研究机构8个，另建有海南育种基地1处。现有在职职工108人，其中科技人员90人，管理人员18人。
+              </p>
+              <p>
+                “十三五”以来，研究院共申请并获得各级项目26个，包含国家级7个，省级19个。项目总经费1128万元。其中，水稻17项，包括国家级2个，省级15个，项目总经费517.5万元;玉米6项，包括国家级4个，省级2个，项目总经费535.5万元;大豆2项，包括国家级1个，省级1个，项目总经费44万元;植保省级1个，项目总经费31万元。
+              </p>
+              <p>此外，玉米、水稻国家产业技术体系综合试验站每年经费各50万元。</p>
+              <div class="center">
+                <img src="./images/科技/41.jpg">
+              </div>
+              <b>刻苦钻研，审定品种多次获奖</b>
+              <p>
+                “十三五”以来，研究院共审定品种73个。其中，水稻品种61个、玉米品种10个、大豆品种2个。据统计，1977至2018年，该院水稻品种审定共129个，列全国相关科研院校第10位，列全国地区级科研院校第2位。其中有6个水稻品种达到国家二级优质米标准、14个品种达到国家三级优质米标准。2018-2019年，3个品种(通系933、通育269和通系945)在全国优良食味粳稻评比中获得金奖，22个水稻品种获得植物新品种保护权。
+              </p>
+              <p>“十三五”以来，研究院共获得奖项18项。其中，吉林省科技进步奖12项(二等奖7项、三等奖5项)，吉林省农业技术推广一等奖2项，通化市科学技术奖4项;在国际、国内发表科技论文60多篇，其中SCI
+                (科学引文索引)3篇。</p>
+              <div class="center">
+                <img src="./images/科技/42.jpg">
+              </div>
+              <b>加强合作，全力促进成果转化</b>
+              <p>“十三五”以来，研究院继续利用项目协作的机会加强对外合作与交流，积极与国家级科研机构建立合作关系，加强与国内大专院校、企业、专业大户、示范基地的联合，全力促进科研成果转化。</p>
+              <p>与中国农业科学院作物所合作开展“转TaDREB
+                基因抗旱玉米新品系创制”“绿色种质资源鉴定”“野生大豆利用及高蛋白种质创新”项目;与中科院东北地理与生态研究所合作开展“水稻抗病育种、病虫害生物防治”项目;与中国科学院遗传与发育生物学研究所合作开展“抗稻瘟病优良新品种的鉴定、筛选及示范”项目;与青岛清原种子科学有限公司合作开展“玉米优良性状差异化资源创制及品种选育”项目；与吉林蛙田米业等企业合作开展“水稻抗病、优良食味种质资源的创新与新品种选育”项目。同时，加强与通农公司等企业合作，推进玉米、水稻、大豆等新品种科技成果转化。
+              </p>
+              <p>
+                进入“十四五”，市农业科学研究院紧紧围绕“七个通化”建设，继续担负起全市农业科学技术研究、农业科研人才培养、对外科技合作交流、服务地方农村经济、为社会提供优质高效科研成果和科技服务的责任与使命，重点在农业应用研究、农业共性关键技术研究、重大技术集成与示范、推广与转化，以及解决全市农业与农村经济发展中的重大问题和关键技术等方面履行职责，成为全市农业科技创新基地、绿色高效生态循环农业示范基地、人才集聚高地、成果转化推广和对外合作交流中心，为本市农业和农村经济实现跨越式发展发挥科技支撑与引领作用。
+              </p>
+              <el-row type="flex" justify="space-around">
+                <el-col><img src="./images/科技/44.jpg" style="border-radius: 15px;margin-right: 20px;"></el-col>
+                <el-col><img src="./images/科技/45.jpg" style="border-radius: 15px;"></el-col>
+              </el-row>
+            </div>
+          </el-tab-pane>
+
+          <el-tab-pane name="禾下乘凉梦">
+            <img src="./images/desc-bg.jpg" width="90%" height="250px">
+            <ul>
+              <li><img src="./images/desc-header.png"></li>
+              <span>DREAM</span>
+              <p style="font-size: 22px;margin: 5px 0 10px 0;">禾下乘凉梦</p>
+              <li><img src="./images/desc-footer.png"></li>
+            </ul>
+            <div class="pane" style="margin-top: 20px;">
+              <el-row type="flex" justify="space-between">
+                <el-col :span="8"><img src="./images/禾下乘凉梦/51.jpg" width="640px"></el-col>
+                <el-col :span="8">
+                  <p style="margin-top: 80px;">袁隆平常说，他有一个“禾下乘凉梦”：</p>
+                  <p>“在这个美梦里，水稻长得有高粱那么高，子粒有花生米那么大，能够让劳作者在夏日炎炎里避暑纳凉。”</p>
+                  <p>他说，“我的贪欲是水稻产量，到了亩产700公斤，贪着亩产800公斤、900公斤、1000公斤和1100公斤，从来不满足。”</p>
+                </el-col>
+              </el-row>
+            </div>
+          </el-tab-pane>
+
+          <el-tab-pane name="发展战略">
+            <img src="./images/desc-bg.jpg" width="90%" height="250px">
+            <ul>
+              <li><img src="./images/desc-header.png"></li>
+              <span>DEVELOP</span>
+              <p style="font-size: 22px;margin: 5px 0 10px 0;">发展战略</p>
+              <li><img src="./images/desc-footer.png"></li>
+            </ul>
+            <div class="pane">
+              <p>新中国成立以来，党和政府始终将保障粮食安全放在重要战略地位。1996年，国务院发布《中国的粮食问题》白皮书，明确表示中国能够依靠自己的力量实现粮食基本自给，提出了立足国内资源、实现粮食基本自给的方针。
+              </p>
+              <p>
+                习近平总书记在2020年中央农村工作会议上强调“要牢牢把住粮食安全主动权，粮食生产年年要抓紧”。《纲要》要求“实施分品种保障策略，完善重要农产品供给保障体系和粮食产购储加销体系，确保口粮绝对安全、谷物基本自给、重要农副产品供应充足。毫不放松抓好粮食生产，深入实施藏粮于地、藏粮于技战略”。
+              </p>
+              <p>“十三五”以来，通化市农业科学研究院充分发挥自身优势，心系国家粮食安全，实施科技兴农战略，克服困难，奋力而为，刻苦钻研，促进科研成果转化，助力农业和农村经济实现跨跃式发展。</p>
+              <b>奋力而为，屡获各级项目支持</b>
+              <p>
+                市农业科学研究院成立于1956年，原为通化地区农业试验站，1995年更名为通化市农业科学研究院。研究院现有国有土地1000亩，其中行政后勤用地200亩，农业科研用地800亩。全院共下设16个机构，其中，科研管理处、技术开发处等行政管理机构8个，玉米所、水稻所、作物所、植保所等科学研究机构8个，另建有海南育种基地1处。现有在职职工108人，其中科技人员90人，管理人员18人。
+              </p>
+              <p>
+                “十三五”以来，研究院共申请并获得各级项目26个，包含国家级7个，省级19个。项目总经费1128万元。其中，水稻17项，包括国家级2个，省级15个，项目总经费517.5万元;玉米6项，包括国家级4个，省级2个，项目总经费535.5万元;大豆2项，包括国家级1个，省级1个，项目总经费44万元;植保省级1个，项目总经费31万元。
+              </p>
+              <p>此外，玉米、水稻国家产业技术体系综合试验站每年经费各50万元。</p>
+              <div class="center">
+                <img src="./images/战略/61.jpg">
+              </div>
+              <b>刻苦钻研，审定品种多次获奖</b>
+              <p>
+                “十三五”以来，研究院共审定品种73个。其中，水稻品种61个、玉米品种10个、大豆品种2个。据统计，1977至2018年，该院水稻品种审定共129个，列全国相关科研院校第10位，列全国地区级科研院校第2位。其中有6个水稻品种达到国家二级优质米标准、14个品种达到国家三级优质米标准。2018-2019年，3个品种(通系933、通育269和通系945)在全国优良食味粳稻评比中获得金奖，22个水稻品种获得植物新品种保护权。
+              </p>
+              <p>“十三五”以来，研究院共获得奖项18项。其中，吉林省科技进步奖12项(二等奖7项、三等奖5项)，吉林省农业技术推广一等奖2项，通化市科学技术奖4项;在国际、国内发表科技论文60多篇，其中SCI
+                (科学引文索引)3篇。
+              </p>
+              <div class="center">
+                <img src="./images/战略/62.jpg">
+              </div>
+              <b>加强合作，全力促进成果转化</b>
+              <p>“十三五”以来，研究院继续利用项目协作的机会加强对外合作与交流，积极与国家级科研机构建立合作关系，加强与国内大专院校、企业、专业大户、示范基地的联合，全力促进科研成果转化。</p>
+              <p>与中国农业科学院作物所合作开展“转TaDREB
+                基因抗旱玉米新品系创制”“绿色种质资源鉴定”“野生大豆利用及高蛋白种质创新”项目;与中科院东北地理与生态研究所合作开展“水稻抗病育种、病虫害生物防治”项目;与中国科学院遗传与发育生物学研究所合作开展“抗稻瘟病优良新品种的鉴定、筛选及示范”项目;与青岛清原种子科学有限公司合作开展“玉米优良性状差异化资源创制及品种选育”项目；与吉林蛙田米业等企业合作开展“水稻抗病、优良食味种质资源的创新与新品种选育”项目。同时，加强与通农公司等企业合作，推进玉米、水稻、大豆等新品种科技成果转化。
+              </p>
+              <p>
+                进入“十四五”，市农业科学研究院紧紧围绕“七个通化”建设，继续担负起全市农业科学技术研究、农业科研人才培养、对外科技合作交流、服务地方农村经济、为社会提供优质高效科研成果和科技服务的责任与使命，重点在农业应用研究、农业共性关键技术研究、重大技术集成与示范、推广与转化，以及解决全市农业与农村经济发展中的重大问题和关键技术等方面履行职责，成为全市农业科技创新基地、绿色高效生态循环农业示范基地、人才集聚高地、成果转化推广和对外合作交流中心，为本市农业和农村经济实现跨越式发展发挥科技支撑与引领作用。
+              </p>
+            </div>
+          </el-tab-pane>
+
+        </el-tabs>
+
+      </el-main>
+
+      <el-footer height="100px">
+        <p>版权所有 © 2023 ALL RIGHTS RESERVED. XICP备10000XXX号</p>
+        <p>Powered By 网媒b2102班第八组</p>
+      </el-footer>
+
+    </el-container>
+  </div>
+</body>
+<!-- import Vue before Element -->
+<script src="./js/vue.js"></script>
+<!-- import JavaScript -->
+<script src="./js/element-ui.js"></script>
+<!-- 图表JS -->
+<script src="./js/echarts.js"></script>
+<!-- 中国地图JS -->
+<script src="./js/chain.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: () => {
+      return {
+        activeIndex: '首页',
+        labelName: '首页',
+        images: [
+          './images/首页/11.png',
+          './images/首页/12.png',
+          './images/首页/13.png',
+          './images/首页/14.png'
+        ]
+      }
+    },
+    methods: {
+      changeLabel(key, keyPath) {
+        this.labelName = key;
+      }
+    },
+    mounted() {
+      // 基于准备好的dom，初始化echarts实例
+      var mapChart = echarts.init(document.getElementById('map'));
+
+      // 指定图表的配置项和数据
+      var option = {
+        //设置一个标题
+        title: {
+          text: '产销省份图',
+          x: 'center',
+          y: '5%',
+          textStyle: {
+            color: '#000',
+            fontSize: "20"
+          }
+        },
+        //鼠标划过省份下弹框
+        tooltip: {
+          show: true,
+          // 悬浮显示
+          trigger: 'item',
+          // 自定义提示框信息
+          formatter: function (params) {
+            let msg;
+            switch (params.value) {
+              case 0:
+                msg = '生产区';
+                break;
+              case 500:
+                msg = '产销平衡区';
+                break;
+              case 1000:
+                msg = '主销区';
+                break;
+              default:
+                msg = '未计入统计';
+            }
+            return params.name + '：' + msg;
+          }
+        },
+        visualMap: {
+          type: 'piecewise',
+          min: 0,
+          max: 1000,
+          left: 'left',
+          top: 'bottom',
+          // 不显示数值
+          text: ['主销区', '生产区'], // 文本，默认为数值文本
+          calculable: true,
+          inRange: {
+            color: ['#668E35', '#F8CB8F', '#D83143']
+          }
+        },
+        series: [{
+          type: 'map',
+          map: 'china',
+          zoom: 1.25,
+          label: {
+            show: true
+          },
+          data: [
+            {
+              name: '湖北',
+              value: 0
+            }, {
+              name: '内蒙古',
+              value: 0
+            }, {
+              name: '黑龙江',
+              value: 0
+            }, {
+              name: '吉林',
+              value: 0
+            }, {
+              name: '辽宁',
+              value: 0
+            }, {
+              name: '河北',
+              value: 0
+            }, {
+              name: '河南',
+              value: 0
+            }, {
+              name: '山东',
+              value: 0
+            }, {
+              name: '江苏',
+              value: 0
+            }, {
+              name: '安徽',
+              value: 0
+            }, {
+              name: '湖北',
+              value: 0
+            }, {
+              name: '湖南',
+              value: 0
+            }, {
+              name: '江西',
+              value: 0
+            }, {
+              name: '四川',
+              value: 0
+            }, {
+              name: '新疆',
+              value: 500
+            }, {
+              name: '西藏',
+              value: 500
+            }, {
+              name: '青海',
+              value: 500
+            }, {
+              name: '甘肃',
+              value: 500
+            }, {
+              name: '宁夏',
+              value: 500
+            }, {
+              name: '陕西',
+              value: 500
+            }, {
+              name: '山西',
+              value: 500
+            }, {
+              name: '重庆',
+              value: 500
+            }, {
+              name: '贵州',
+              value: 500
+            }, {
+              name: '云南',
+              value: 500
+            }, {
+              name: '广西',
+              value: 500
+            }, {
+              name: '北京',
+              value: 1000
+            }, {
+              name: '上海',
+              value: 1000
+            }, {
+              name: '浙江',
+              value: 1000
+            }, {
+              name: '福建',
+              value: 1000
+            }, {
+              name: '广东',
+              value: 1000
+            }, {
+              name: '海南',
+              value: 1000
+            }, {
+              name: '天津',
+              value: 1000
+            }
+          ]
+        }]
+      };
+
+      // 使用刚指定的配置项和数据显示图表。
+      mapChart.setOption(option);
+    },
+  })
+</script>
+
+</html>
